@@ -1,0 +1,18 @@
+myclib
+======
+
+An example automake project that saves the setup in order to use automake in a project!
+
+
+Build
+=====
+
+autoreconf --force --install
+./configure --prefix=/tmp/test
+make
+make check
+make install
+
+Bundle
+======
+./bundle.sh
