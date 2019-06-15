@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <math.h>
-#include "sum.h"
+#include "myclib.h"
 
 int main(int argc, char *argv[]) {
     double a = 2.718;

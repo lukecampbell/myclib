@@ -10,3 +10,5 @@ check_PROGRAMS=myclib-test
 myclib_test_SOURCES=main.c
 myclib_test_DEPENDENCIES=libmyclib.la
 myclib_test_LDFLAGS=-lmyclib -lm
+
+include_HEADERS=myclib.h
