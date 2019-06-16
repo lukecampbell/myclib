@@ -1,7 +1,4 @@
 
-myclib_wrap.c: myclib.i
-	swig -java myclib.i
-
 lib_LTLIBRARIES=libmyclib-jni.la
 libmyclib_jni_la_SOURCES=../src/sum.c myclib_wrap.c
 if OSX
@@ -11,5 +8,12 @@ if LINUX
 libmyclib_jni_la_CFLAGS=-I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux -I../src
 endif
 
+TESTS=run-test.sh
+
+myclib_wrap.c: myclib.i
+	swig -java myclib.i
+
 clean-local:
 	-rm -rf myclib_wrap.c
+	-rm -rf myclib*.java
+	-rm -rf *.class

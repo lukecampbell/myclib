@@ -9,7 +9,7 @@ AC_ARG_ENABLE([jni],
     AS_HELP_STRING([--enable-jni], [Enable JNI]))
 
 AS_IF([test "x$enable_jni" = "xyes"], [
-    AX_PKG_SWIG(4.0.0)
+    AX_PKG_SWIG(3.0.0)
     AC_OUTPUT(jni/Makefile)
     AC_CANONICAL_HOST
 
