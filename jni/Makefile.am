@@ -17,3 +17,10 @@ clean-local:
 	-rm -rf myclib_wrap.c
 	-rm -rf myclib*.java
 	-rm -rf *.class
+
+JNITest.class: JNITest.java myclibJNI.java myclib.java
+	javac $^
+
+run-test.sh: run-test.sh.in JNITest.class
+	cp run-test.sh.in run-test.sh
+	chmod 700 run-test.sh
